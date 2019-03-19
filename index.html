@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    </script>
+    <title>Movies</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>FANDAAAAANGOOOOO</h1>
+      </div>
+      <form class="form-group" id="inputform">
+        <div class="row">
+          <div class="col-4-md">
+            <select class="form-control" id="ageinput">
+              <option value="Child">Child (ages under 13)</option>
+              <option value="Adult" selected>Adult (ages 13 - 64 )</option>
+              <option value="Senior">Senior (ages 65+ )</option>
+            </select>
+          </div>
+          <div class="col-4-md">
+            <select class="form-control" id="movieinput">
+              <option value="blank" selected>Please select movie</option>
+              <option value="tit">Titanic</option>
+              <option value="bttf">Back to the Future</option>
+              <option value="psy">Psycho</option>
+            </select>
+          </div>
+          <div class="col-4-md">
+            <div class="radio">
+              <label>
+                <input type="radio" name="time" value="1pm">
+                1pm (Matinee)
+              </label>
+              <label>
+                <input type="radio" name="time" value="6pm">
+                6pm (Standard)
+              </label>
+              <label>
+                <input type="radio" name="time" value="9pm">
+                9pm (Late)
+              </label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="resultbtn">Click here to see the price!</button>
+      </form>
+      <div id="resultsdiv">
+        <h3><span id=tixprice></span></h3>
+      </div>
+    </div>
+  </body>
+</html>
