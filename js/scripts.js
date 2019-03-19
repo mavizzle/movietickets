@@ -3,11 +3,12 @@
 
 
 function Ticket() {
-  this.price = 0;
+  this.price = 10;
   this.movie = '';
   this.time = '';
   this.age = '';
   this.movieVal = '';
+  this.timeInput = ''
 }
 
 Ticket.prototype.displayMessage = function() {
@@ -19,21 +20,35 @@ Ticket.prototype.displayMessage = function() {
   }
 }
 
-// Ticket.protoype.blankCheck = function() {
-//   if (this.movie === 'blank') {
-//
-//   }
-// }
 
-// Ticket.protoype.convert() {
-//   if (this.movie === 'tit') {
-//     this.movie = 'Titanic';
-//   } else if (this.movie === 'bttf') {
-//     this.movie = 'Back to the Future';
-//   } else {
+
+// Ticket.protoype.priceCalc = function() {
 //
-//   }
+//
+//   console.log(this.age + ' ' + this.timeInput);
+//
+//   // if (ageInput === 'Child') {
+//   //   this.price = 3;
+//   // } else if (ageInput === 'Senior') {
+//   //   this.price = 5;
+//   // } else {
+//   //   if (timeInput === '5') {
+//   //     this.price = 5;
+//   //   } else if (timeInput === '13') {
+//   //     this.price = 13;
+//   //   }
+//   // }
 // }
+//
+// // Ticket.protoype.convert() {
+// //   if (this.movie === 'tit') {
+// //     this.movie = 'Titanic';
+// //   } else if (this.movie === 'bttf') {
+// //     this.movie = 'Back to the Future';
+// //   } else {
+// //
+// //   }
+// // }
 
 
 $(document).ready(function(){
@@ -44,6 +59,7 @@ $(document).ready(function(){
     var newTicket = new Ticket();
 
     newTicket.age = $('#ageinput').val();
+    // newTicket.timeInput = $('#timeinput').val();
     newTicket.movie = $('#movieinput option:selected').text();
     newTicket.time = $('input:radio[name=time]:checked').parent().text();
     newTicket.movieVal = $('#movieinput').val();
