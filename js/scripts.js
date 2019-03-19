@@ -7,11 +7,16 @@ function Ticket() {
   this.movie = '';
   this.time = '';
   this.age = '';
+  this.movieVal = '';
 }
 
-Ticket.prototype.calc = function() {
-  var message = `You've selected a ${this.age} ticket to see ${this.movie} at ${this.time}`
-  return message;
+Ticket.prototype.displayMessage = function() {
+  if (this.movieVal === 'blank') {
+    return this.movie;
+  } else {
+    var message = `You've selected a ${this.age} ticket to see ${this.movie} at ${this.time}`
+    return message;
+  }
 }
 
 // Ticket.protoype.blankCheck = function() {
@@ -41,14 +46,15 @@ $(document).ready(function(){
     newTicket.age = $('#ageinput').val();
     newTicket.movie = $('#movieinput option:selected').text();
     newTicket.time = $('input:radio[name=time]:checked').parent().text();
+    newTicket.movieVal = $('#movieinput').val();
 
     // console.log(newTicket);
 
-    var resultMessage = newTicket.calc();
+    var resultMessage = newTicket.displayMessage();
 
     // var all = (age + ', ' + movie + ', ' + time);
 
-    $('#tixprice').text(resultMessage);
+    $('#displaymsg').text(resultMessage);
     $('#resultsdiv').fadeIn();
 
 
